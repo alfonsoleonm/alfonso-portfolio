@@ -1,14 +1,43 @@
 .page-header {
   margin-bottom: 64px;
-  .tag { display: block; margin-bottom: 12px; }
-  h1 { font-size: clamp(48px, 7vw, 80px); }
+
+  .tag {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(48px, 7vw, 80px);
+  }
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 80px;
+  grid-template-columns: 200px 1fr 280px;
+  gap: 64px;
   align-items: start;
+}
+
+.about-photo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+    border: none;
+    filter: grayscale(10%);
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
 }
 
 .about-text {
@@ -22,8 +51,10 @@
   }
 
   p {
+    font-family: var(--font-display) !important;
+    font-weight: 400;
     color: var(--text-dim);
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
     margin-bottom: 20px;
   }
@@ -40,7 +71,6 @@
   border: 1px solid var(--border);
   padding: 32px;
   position: static;
-  top: 80px;
 }
 
 .info-item {
@@ -51,8 +81,13 @@
   border-bottom: 1px solid var(--border);
   font-size: 13px;
 
-  &:last-child { border-bottom: none; }
-  &:first-child { padding-top: 0; }
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .info-label {
@@ -82,19 +117,32 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
 }
 
-/* SKILLS */
 .skills-section {
   border-top: 1px solid var(--border);
 }
 
 .section-header {
   margin-bottom: 56px;
-  .tag { display: block; margin-bottom: 12px; }
-  h2 { font-size: clamp(36px, 5vw, 56px); }
+
+  .tag {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: clamp(36px, 5vw, 56px);
+  }
 }
 
 .skills-grid {
@@ -110,7 +158,9 @@
   padding: 40px;
   transition: background 0.2s;
 
-  &:hover { background: var(--surface); }
+  &:hover {
+    background: var(--surface);
+  }
 
   h3 {
     font-size: 16px;
@@ -134,7 +184,9 @@
     gap: 10px;
     transition: color 0.2s;
 
-    &:hover { color: var(--text); }
+    &:hover {
+      color: var(--text);
+    }
   }
 
   .bullet {
@@ -147,9 +199,21 @@
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
-  .info-block { position: static; }
+
+  .about-photo {
+    justify-content: flex-start;
+
+    img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  .info-block {
+    position: static;
+  }
 }
 
 .certs-block {
