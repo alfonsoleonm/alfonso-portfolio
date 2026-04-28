@@ -1,0 +1,96 @@
+<section class="about-hero section">
+  <div class="container">
+    <div class="page-header">
+      <span class="tag">// about</span>
+      <h1>Who I am</h1>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead">
+          Full-stack software engineer with 4+ years of experience designing and building
+          cloud-based web applications across frontend, backend, and AWS environments.
+        </p>
+        <p>
+          I have worked through the full SDLC, from architecture discussions and system design
+          to implementation, deployment, and production monitoring. My experience spans
+          Angular frontends, Node.js and Java backends, and serverless AWS infrastructure
+          including Lambda, EventBridge, Step Functions, IoT Core, and DynamoDB.
+        </p>
+        <p>
+          I have shipped real-time monitoring and automation platforms for IoT and robotics
+          data streams, built full-stack features for US-based clients in Scrum teams, and
+          owned features end-to-end across Java Spring Boot, Angular, and Node.js.
+        </p>
+        <p>
+          Outside of work I stay active through padel, cycling, running, and tennis. I also
+          play guitar, read and organize family barbecues that usually end up with
+          way too much food.
+        </p>
+        <div class="about-links">
+          <a href="https://www.linkedin.com/in/alfonso-leon-macedo-40b157192" target="_blank"
+            class="btn-outline">LinkedIn ↗</a>
+          <a href="https://github.com/alfonsoleonm" target="_blank" class="btn-outline">GitHub ↗</a>
+          <a routerLink="/contact" class="btn-primary">Contact me</a>
+        </div>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-block">
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <span>Mexico · Remote</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Experience</span>
+            <span>4+ years</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Stack</span>
+            <span>Angular · Node.js · Java · AWS</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Languages</span>
+            <span>Spanish (Native) · English (TOEFL 613)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Education</span>
+            <span>B.S. Computer Engineering · UAEMex</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Status</span>
+            <span class="status-available">Open to opportunities</span>
+          </div>
+        </div>
+
+        <div class="certs-block">
+          <span class="certs-label">Certifications</span>
+          <ul>
+            @for (cert of certifications; track cert) {
+            <li>{{ cert }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">// skills</span>
+      <h2>Tech Stack</h2>
+    </div>
+    <div class="skills-grid">
+      @for (group of skills; track group.category) {
+      <div class="skill-group">
+        <h3>{{ group.category }}</h3>
+        <ul>
+          @for (item of group.items; track item) {
+          <li><span class="bullet">▸</span>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+<section class="section">
+  <div class="container">
+    <div class="resume-header">
+      <div>
+        <span class="tag">// resume</span>
+        <h1>Experience &<br>Education</h1>
+      </div>
+      <a href="assets/Alfonso_Leon_Resume.pdf" download="Alfonso_Leon_Resume.pdf" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resume-body">
+
+      <!-- EXPERIENCE -->
+      <div class="resume-section">
+        <h2 class="section-title"><span class="accent-text">01.</span> Experience</h2>
+        @for (job of experience; track job.company) {
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="period">{{ job.period }}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>{{ job.role }}</h3>
+              <span class="company">{{ job.company }}</span>
+              <ul class="bullet-list">
+                @for (b of job.bullets; track b) {
+                  <li>{{ b }}</li>
+                }
+              </ul>
+              <div class="item-tags">
+                @for (tag of job.tags; track tag) {
+                  <span>{{ tag }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="resume-section">
+        <h2 class="section-title"><span class="accent-text">02.</span> Education</h2>
+        @for (edu of education; track edu.school) {
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="period">{{ edu.period }}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>{{ edu.degree }}</h3>
+              <span class="company">{{ edu.school }}</span>
+              <p class="edu-note">{{ edu.note }}</p>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="resume-section">
+        <h2 class="section-title"><span class="accent-text">03.</span> Certifications</h2>
+        <div class="certs-grid">
+          @for (cert of certifications; track cert) {
+            <div class="cert-item">
+              <span class="cert-bullet">▸</span>
+              <span>{{ cert }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resume-note">
+      <p>Want the full picture? Download my resume or reach out directly.</p>
+      <a routerLink="/contact" class="btn-outline">Get in touch →</a>
+    </div>
+  </div>
+</section>
