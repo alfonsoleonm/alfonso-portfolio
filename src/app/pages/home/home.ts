@@ -23,7 +23,7 @@ export class HomeComponent {
       desc: 'AI-powered tool that analyzes your resume against a job description and returns match score, skill gaps, and improvement suggestions.',
       tags: ['Angular', 'Node.js', 'Gemini AI', 'Netlify', 'Render'],
       github: null,
-      live: 'https://resume-analyzer-frontend.netlify.app'
+      live: 'https://resume-analyzer-webapp.netlify.app'
     },
     {
       name: 'El Liberal de Jiquilpan',
