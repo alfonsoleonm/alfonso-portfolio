@@ -22,6 +22,18 @@ export class ProjectsComponent {
     },
     {
       num: '02',
+      name: 'Habit Tracker',
+      subtitle: 'Personal productivity app',
+      desc: 'A full-stack habit tracking app with a calendar-based grid view, custom habit creation per month, and a stats dashboard showing completion rates and streaks. Built with Angular on the frontend and a serverless AWS backend.',
+      problem: 'Most habit trackers are either too simple or too complex. I wanted something that gave a clear visual picture of consistency over time without the noise.',
+      solution: 'Built a calendar grid UI where each day shows habit completion at a glance. Backend uses AWS Lambda + DynamoDB for persistence, with Cognito handling authentication. Deployed frontend on Vercel, backend as a Lambda function.',
+      tags: ['Angular', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Cognito', 'Node.js', 'Vercel'],
+      github: 'https://github.com/alfonsoleonm/habit-tracker',
+      live: 'https://habit-tracker-tan-eight.vercel.app/',
+      type: 'Solo project · Full stack, cloud architecture, UX design'
+    },
+    {
+      num: '03',
       name: 'BrewFlow',
       subtitle: 'Serverless coffee ordering platform',
       desc: 'A full-stack MVP for a coffee shop ordering system, designed with a focus on scalable cloud architecture and clean UX. Customers browse a menu, place orders, and track their status in real time. Staff manage the queue through an admin dashboard.',
@@ -33,7 +45,7 @@ export class ProjectsComponent {
       type: 'Solo project · Product design, frontend, backend, and AWS architecture'
     },
     {
-      num: '03',
+      num: '04',
       name: 'AL Store',
       subtitle: 'Personal e-commerce side project',
       desc: 'A personal web app built to list and sell watches from my own collection. Buyers browse listings and reach out via Facebook Messenger to close the sale. Built with Angular and Firebase for a fully managed, real-time backend with no server maintenance.',
@@ -45,7 +57,7 @@ export class ProjectsComponent {
       type: 'Solo project · Personal side hustle'
     },
     {
-      num: '04s',
+      num: '05',
       name: 'El Liberal de Jiquilpan',
       subtitle: 'Custom news platform · Full Stack & Project Lead',
       desc: 'End-to-end development of a custom news platform for a regional newspaper in Jiquilpan, Michoacán. Led the project from requirements and architecture through delivery, completed as a university social service engineering program.',

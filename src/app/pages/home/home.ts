@@ -26,11 +26,11 @@ export class HomeComponent {
       live: 'https://resume-analyzer-webapp.netlify.app'
     },
     {
-      name: 'El Liberal de Jiquilpan',
-      desc: 'Custom news platform built end-to-end for a regional newspaper: PHP backend, MySQL database, AWS-hosted, delivered as a university social service project.',
-      tags: ['PHP', 'MySQL', 'AWS', 'JavaScript', 'Bootstrap'],
-      github: null,
-      live: 'https://elliberaldejiquilpan.com/web-semanario/'
-    }
+      name: 'Habit Tracker',
+      desc: 'Full-stack productivity app with calendar grid, custom habits, and streak tracking. Angular frontend with AWS Lambda and DynamoDB backend.',
+      tags: ['Angular', 'AWS Lambda', 'DynamoDB', 'Cognito'],
+      github: 'https://github.com/alfonsoleonm/habit-tracker',
+      live: 'https://habit-tracker-tan-eight.vercel.app/'
+    },
   ];
 }
